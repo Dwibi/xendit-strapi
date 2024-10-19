@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoices",
+  "info": {
+    "singularName": "invoice",
+    "pluralName": "invoices",
+    "displayName": "Invoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "externalId": {
+      "type": "string",
+      "unique": true
+    },
+    "paymentStatus": {
+      "type": "enumeration",
+      "enum": [
+        "PENDING",
+        "PAID",
+        "SETTLED",
+        "EXPIRED",
+        "UNKNOWN_ENUM_VALUE"
+      ]
+    },
+    "paymentAmount": {
+      "type": "decimal"
+    },
+    "invoiceItems": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::invoice-item.invoice-item",
+      "mappedBy": "invoice"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "invoices"
+    }
+  }
+}

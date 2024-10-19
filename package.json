@@ -1,0 +1,39 @@
+{
+  "name": "belajar-strapi-2",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "deploy": "strapi deploy"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "@strapi/plugin-cloud": "4.25.13",
+    "@strapi/plugin-i18n": "4.25.13",
+    "@strapi/plugin-users-permissions": "4.25.13",
+    "@strapi/strapi": "4.25.13",
+    "pdf-creator-node": "^2.3.5",
+    "pg": "8.8.0",
+    "puppeteer": "^23.5.3",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "5.3.4",
+    "styled-components": "5.3.3",
+    "xendit-node": "^6.0.0"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "e72482df-b7b5-45b0-93ea-079cb69befa8"
+  },
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
